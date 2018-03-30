@@ -24,11 +24,23 @@ export class EventService {
       location: "248 McKibbin St, Brooklyn, NY",
       dateTime: new Date("March 30, 2018 16:00:00 EDT"),
       info: "Open studio info..."
-    },
+    }
   ];
 
   getEvents(): Event[] {
     return this.events;
+  }
+
+  getEventsByMonth(): Event[][] {
+    let eventsByMonth = []; //array of arrays, indexed by month
+    for (let m = 0; m < 12; m++) {
+      eventsByMonth[m] = [];
+    }
+    this.events.forEach((event) => {
+      let month = event['date'].getMonth();
+      eventsByMonth[month].push(event)
+    });
+    return eventsByMonth;
   }
 
 }
