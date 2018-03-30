@@ -3,7 +3,27 @@ import { Event } from './models/event';
 
 @Injectable()
 export class EventService {
+  events: Event[] = [
+    {
+      name: "Gallery Opening",
+      type: "Gallery",
+      location: "423 8th Ave, New York, NY",
+      date: "April 6, 2018",
+      time: "6-9 pm",
+      info: "Solo exhibition info..."
+    },
+    {
+      name: "Open Studio",
+      type: "Studio",
+      location: "248 McKibbin St, Brooklyn, NY",
+      date: "May 15, 2018",
+      time: "4-7pm",
+      info: "Open studio info..."
+    },
+  ];
 
-  constructor() { }
+  getEvents(): Event[] {
+    return this.events;
+  }
 
 }

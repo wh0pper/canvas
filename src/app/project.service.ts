@@ -28,8 +28,6 @@ export class ProjectService {
     }
   ];
 
-  constructor() { }
-
   getProjects(): Project[] {
     return this.projects;
   }
