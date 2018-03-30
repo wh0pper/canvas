@@ -1,5 +1,7 @@
+<input [(ngModel)]="searchField" placeholder="search field">
+<input [(ngModel)]="searchText" placeholder="search text">
+<div class="row" *ngFor="let project of projects | filter : searchField: searchText">
 
-<div class="row" *ngFor="let project of projects">
   <app-project-card [project]="project"></app-project-card>
 
 </div>
