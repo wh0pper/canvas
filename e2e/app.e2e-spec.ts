@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('artpage App', () => {
+describe('cnvs App', () => {
   let page: AppPage;
 
   beforeEach(() => {
