@@ -8,6 +8,7 @@ import { ProjectCardComponent } from './project-card/project-card.component';
 
 import { ProjectService } from './project.service';
 import { ProjectsComponent } from './projects/projects.component';
+import { FilterPipe } from './filter.pipe';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ProjectsComponent } from './projects/projects.component';
     AppComponent,
     NavComponent,
     ProjectCardComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
