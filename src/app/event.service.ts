@@ -8,24 +8,21 @@ export class EventService {
       name: "Gallery Opening",
       type: "Art",
       location: "423 8th Ave, New York, NY",
-      date: "April 6, 2018",
-      time: "6-9 pm",
+      dateTime: new Date("April 6, 2018 18:00:00 EDT"),
       info: "Solo exhibition info..."
     },
     {
       name: "Concert",
       type: "Music",
       location: "1553 Greenwich St, New York, NY",
-      date: "April 6, 2018",
-      time: "10 pm",
+      dateTime: new Date("April 6, 2018 22:00:00 EDT"),
       info: "Experimental noise music..."
     },
     {
       name: "Open Studio",
       type: "Art",
       location: "248 McKibbin St, Brooklyn, NY",
-      date: "May 15, 2018",
-      time: "4-7pm",
+      dateTime: new Date("March 30, 2018 16:00:00 EDT"),
       info: "Open studio info..."
     },
   ];
