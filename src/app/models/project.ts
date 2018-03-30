@@ -1,6 +1,6 @@
 export class Project {
   title: string;
-  artist: string;
+  artist: Artist;
   medium: string;
   imgURL: string;
   info: string;
