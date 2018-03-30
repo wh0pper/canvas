@@ -1,5 +1,16 @@
-<input [(ngModel)]="searchField" placeholder="search field">
-<input [(ngModel)]="searchText" placeholder="search text">
+<div class="filterForm">
+  <label>Search by:</label>
+  <select [(ngModel)]="searchField" class="form-control">
+    <option value="title">Project title</option>
+    <option value="artist">Artist</option>
+    <option value="medium">Medium</option>
+    <option value="info">Project info</option>
+  </select>
+  <label>Search for:</label>
+  <input [(ngModel)]="searchText" class="form-control mr-sm-2" type="text" placeholder="Search for">
+  <!-- <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button> -->
+</div>
+
 <div class="row" *ngFor="let project of projects | filter : searchField: searchText">
 
   <app-project-card [project]="project"></app-project-card>
