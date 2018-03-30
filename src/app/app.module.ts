@@ -10,6 +10,8 @@ import { ProjectService } from './project.service';
 import { ProjectsComponent } from './projects/projects.component';
 import { FilterPipe } from './filter.pipe';
 import { AppRoutingModule } from './/app-routing.module';
+import { EventsComponent } from './events/events.component';
+import { EventService } from './event.service';
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import { AppRoutingModule } from './/app-routing.module';
     NavComponent,
     ProjectCardComponent,
     ProjectsComponent,
-    FilterPipe
+    FilterPipe,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { AppRoutingModule } from './/app-routing.module';
     AppRoutingModule
   ],
   providers: [
-    ProjectService
+    ProjectService,
+    EventService
   ],
   bootstrap: [AppComponent]
 })
