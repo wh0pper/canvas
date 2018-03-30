@@ -13,6 +13,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { EventsComponent } from './events/events.component';
 import { EventService } from './event.service';
 import { ArtistPageComponent } from './artist-page/artist-page.component';
+import { ArtistService } from './artist.service';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { ArtistPageComponent } from './artist-page/artist-page.component';
   ],
   providers: [
     ProjectService,
-    EventService
+    EventService,
+    ArtistService
   ],
   bootstrap: [AppComponent]
 })
