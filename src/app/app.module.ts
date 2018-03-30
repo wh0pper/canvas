@@ -9,6 +9,7 @@ import { ProjectCardComponent } from './project-card/project-card.component';
 import { ProjectService } from './project.service';
 import { ProjectsComponent } from './projects/projects.component';
 import { FilterPipe } from './filter.pipe';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FilterPipe } from './filter.pipe';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [
     ProjectService
