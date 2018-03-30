@@ -1,3 +1,16 @@
 <p>
   events works!
 </p>
+
+<button (click)="getEventsByMonth()">List events by month</button>
+
+<!-- <div *ngIf="eventsByMonth"> -->
+    <div *ngFor="let month of eventsByMonth; let i = index" class="row">
+      <div class="col-md-2">
+        <p>{{months[i]}}</p>
+      </div>
+      <div class="col-md-10">
+        <li *ngFor="let event of month">{{event.name}}</li>
+      </div>
+    </div>
+<!-- </div> -->

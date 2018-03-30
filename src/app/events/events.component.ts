@@ -9,6 +9,8 @@ import { EventService } from '../event.service';
 })
 export class EventsComponent implements OnInit {
   events: Event[];
+  eventsByMonth: Event[][];
+  months: string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
   constructor(private eventService: EventService) { }
 
@@ -20,16 +22,17 @@ export class EventsComponent implements OnInit {
     this.events = this.eventService.getEvents();
   }
 
-  getEventsByMonth(): Event[][] {
+  getEventsByMonth(): void {
     let eventsByMonth = []; //array of arrays, indexed by month
     for (let m = 0; m < 12; m++) {
       eventsByMonth[m] = [];
     }
     this.events.forEach((event) => {
-      let month = event['date'].getMonth();
+      let month = event['dateTime'].getMonth();
       eventsByMonth[month].push(event)
     });
-    return eventsByMonth;
+    console.log(eventsByMonth);
+    this.eventsByMonth = eventsByMonth;
   }
 
 }
