@@ -4,12 +4,14 @@ import { AlertModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
+import { ProjectCardComponent } from './project-card/project-card.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,
