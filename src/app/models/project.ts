@@ -1,5 +1,3 @@
 export class Project {
-  constructor(public title: string) {
-
-  }
+  title: string;
 }
