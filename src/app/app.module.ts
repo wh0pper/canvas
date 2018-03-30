@@ -12,6 +12,7 @@ import { FilterPipe } from './filter.pipe';
 import { AppRoutingModule } from './/app-routing.module';
 import { EventsComponent } from './events/events.component';
 import { EventService } from './event.service';
+import { ArtistPageComponent } from './artist-page/artist-page.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { EventService } from './event.service';
     ProjectCardComponent,
     ProjectsComponent,
     FilterPipe,
-    EventsComponent
+    EventsComponent,
+    ArtistPageComponent
   ],
   imports: [
     BrowserModule,

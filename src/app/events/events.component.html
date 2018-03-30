@@ -1,16 +1,14 @@
-<p>
-  events works!
-</p>
 
 <button (click)="getEventsByMonth()">List events by month</button>
 
-<!-- <div *ngIf="eventsByMonth"> -->
-    <div *ngFor="let month of eventsByMonth; let i = index" class="row">
-      <div class="col-md-2">
-        <p>{{months[i]}}</p>
-      </div>
-      <div class="col-md-10">
-        <li *ngFor="let event of month">{{event.name}}</li>
-      </div>
+
+<div *ngFor="let month of eventsByMonth; let i = index" class="row">
+  <div class="col-sm-3">
+    <h3 class="card-title">{{months[i]}}</h3>
+  </div>
+  <div class="col-sm-9 card border-secondary mb-3">
+    <div *ngFor="let event of month" class="card-body">
+      {{event.name}} {{event.type}} {{event.location}}
     </div>
-<!-- </div> -->
+  </div>
+</div>

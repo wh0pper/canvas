@@ -24,12 +24,18 @@ export class EventService {
       location: "248 McKibbin St, Brooklyn, NY",
       dateTime: new Date("March 30, 2018 16:00:00 EDT"),
       info: "Open studio info..."
+    },
+    {
+      name: "Figure Drawing",
+      type: "Workshop",
+      location: "123 East 32nd Ave, Brooklyn, NY",
+      dateTime: new Date("May 15, 2018 18:00:00 EDT"),
+      info: "Figure drawing class..."
     }
   ];
 
   getEvents(): Event[] {
     return this.events;
   }
-
 
 }
