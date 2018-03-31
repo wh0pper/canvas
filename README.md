@@ -1,4 +1,13 @@
-# Cnvs
+# Canvas (CNVS)
+
+## Description
+Canvas is a mockup for a social media dedicated to artists and creatives. It's intended to give users a platform for displaying a sharing their work, connecting and collaboriting with other artists, as well as finding and promoting events related to their work. 
+
+## Structure
+Canvas' primary features are:
+* a discovery page that displays searchable and filterable projects that have been uploaded to the platform.
+* an events page
+* artist profiles
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
