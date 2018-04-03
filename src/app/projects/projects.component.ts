@@ -8,7 +8,7 @@ import { ProjectService } from '../project.service';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
-  projects: Project[];
+  projects: FirebaseListObservable<any[]>;
 
   constructor(private projectService: ProjectService) { }
 
