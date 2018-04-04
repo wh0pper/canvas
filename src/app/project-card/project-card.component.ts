@@ -8,11 +8,12 @@ import { Project } from '../models/project';
 })
 export class ProjectCardComponent implements OnInit {
   @Input() project: Project;
+  artistName: string;
 
   constructor() { }
 
   ngOnInit() {
-
+    
   }
 
 }
