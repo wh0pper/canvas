@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Event } from '../models/event';
 import { EventService } from '../event.service';
+// import { FirebaseObjectObservable } from "angularfire2/database";
 
 @Component({
   selector: 'app-events',
