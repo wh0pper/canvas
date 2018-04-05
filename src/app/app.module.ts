@@ -18,10 +18,11 @@ import { ArtistService } from './artist.service';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
-  authDoman: masterFirebaseConfig.authDomain,
+  authDomain: masterFirebaseConfig.authDomain,
   databaseURL: masterFirebaseConfig.databaseURL,
   storageBucket: masterFirebaseConfig.storageBucket
 };
@@ -41,7 +42,8 @@ export const firebaseConfig = {
     FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [
     ProjectService,
