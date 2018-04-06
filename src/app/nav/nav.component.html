@@ -19,10 +19,10 @@
         <div class="dropdown">
           <button class="btn btn-light dropdown-toggle" data-toggle="dropdown">{{userName}}</button>
           <div class="dropdown-menu username">
-            <a class="dropdown-item userFeature">Profile</a>
+            <a class="dropdown-item userFeature" (click)="goToUsersPage(userName)">Profile</a>
             <a class="dropdown-item userFeature">New Project</a>
             <a class="dropdown-item userFeature">New Event</a>
-            <a class="dropdown-item userFeature">Log out</a>
+            <a class="dropdown-item userFeature" (click)="logout()">Log out</a>
           </div>
        </div>
      </div>

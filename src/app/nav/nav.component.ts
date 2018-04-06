@@ -15,6 +15,7 @@ export class NavComponent {
 
   constructor(public authService: AuthenticationService) {
     this.authService.user.subscribe(user =>  {
+      this.user = user;
       if (user == null) {
         this.isLoggedIn = false;
       } else {
@@ -30,5 +31,10 @@ export class NavComponent {
 
   logout() {
     this.authService.logout();
+  }
+
+  goToUsersPage() {
+    console.log(this.user);
+    //navigate based on this.user uid
   }
 }
