@@ -1,13 +1,59 @@
 # Canvas (CNVS)
 
 ## Description
-Canvas is a mockup for a social media dedicated to artists and creatives. It's intended to give users a platform for displaying a sharing their work, connecting and collaboriting with other artists, as well as finding and promoting events related to their work. 
+Canvas is a mockup for a social media platform dedicated to artists and creatives. It's intended to give users a platform for displaying a sharing their work, connecting and collaboriting with other artists, as well as finding and promoting events related to their work. 
 
 ## Structure
 Canvas' primary features are:
 * a discovery page that displays searchable and filterable projects that have been uploaded to the platform.
-* an events page
-* artist profiles
+* an events page, where a registered user can create new events and a visitor can view events organized by month
+* user authentication which unlocks the ability to create an artist profile, upload new projects to the platform, or publish events to the calendar
+* artist profiles that show users stats and link to any projects or events published by that user
+
+Additional planned features:
+* a chat functionality allowing users to communicate directly on the platform
+* the ability to leave comments on projects and RSVP to events
+
+## Prerequisites
+
+You will need the following software properly installed on your computer.
+
+* [Git](https://git-scm.com/)
+* [Node.js](https://nodejs.org/) (with NPM)
+* [TypeScript](https://www.typescriptlang.org/)
+
+## Installation
+
+* Clone this repository
+
+  `$ git clone https://github.com/joshuafairchild1/the-hub`
+
+* Run the following command from the root directory:
+
+  `$ npm install`
+
+This will download the project's dependencies
+
+## Firebase Setup/Configuration
+
+* Sign into the [firebase console](https://firebase.google.com/) and create a new project, then select "Add firebase to your web app". You will be presented with the following information to be added to the project in `src/app/api-key.ts`
+
+  ```
+  export const masterFirebaseConfig = {
+    apiKey: "XXXX",
+    authDomain: "XXXX",
+    databaseURL: "XXXX",
+    projectId: "XXXX",
+    storageBucket: "XXXX",
+  };
+
+## Running / Development
+
+Once the project is installed and your local dev environment is configured correctly, you can start the server.
+
+* Run `$ ng serve`
+* Visit your app at http://localhost:4200.
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
