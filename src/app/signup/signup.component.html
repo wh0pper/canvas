@@ -12,6 +12,12 @@
     <label>Artist Statement:</label>
     <input class="form-control" #statement>
 
-    <button type="button" class="btn btn-secondary" (click)="submitSignupForm(name.value, medium.value, location.value, statement.value)">Submit</button>
+    <label>Email address:</label>
+    <input class="form-control" #email>
+
+    <label>Password:</label>
+    <input class="form-control" #password>
+
+    <button type="button" class="btn btn-secondary" (click)="submitSignupForm(name.value, medium.value, location.value, statement.value, email.value, password.value)">Submit</button>
   </div>
 </div>

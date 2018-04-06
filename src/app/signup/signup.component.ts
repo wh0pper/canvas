@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-signup',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+  constructor(public authService: AuthenticationService) { }
 
   ngOnInit() {
+  }
+
+  submitSignupForm(name, medium, location, statement, email, password) {
+    this.authService.afAuth.auth.createUserWithEmailAndPassword(email, password).catch(function(error) {
+      console.log('signup error');
+    })
   }
 
 }
