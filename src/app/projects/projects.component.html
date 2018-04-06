@@ -1,4 +1,5 @@
-<div class="filterForm">
+<button class="btn btn-light" (click)="toggleSearch()">{{searchButtonText}}</button>
+<div *ngIf="searchButtonText == 'Hide'" class="filterForm">
   <label>Search by:</label>
   <select [(ngModel)]="searchField" class="form-control">
     <option value="title">Project title</option>

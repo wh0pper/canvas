@@ -12,6 +12,7 @@ import { FirebaseListObservable } from "angularfire2/database";
 })
 export class ProjectsComponent implements OnInit {
   projects: FirebaseListObservable<any[]>;
+  searchButtonText: string = "Search";
 
   constructor(private router: Router, private projectService: ProjectService) { }
 
@@ -25,6 +26,14 @@ export class ProjectsComponent implements OnInit {
 
   goToProjectPage(clickedProject) {
 
+  }
+
+  toggleSearch() {
+    if ( this.searchButtonText == "Search" ) {
+      this.searchButtonText = "Hide";
+    } else {
+      this.searchButtonText = "Search";
+    }
   }
 
 }
