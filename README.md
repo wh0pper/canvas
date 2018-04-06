@@ -26,7 +26,7 @@ You will need the following software properly installed on your computer.
 
 * Clone this repository
 
-  `$ git clone https://github.com/joshuafairchild1/the-hub`
+  `$ git clone https://github.com/wh0pper/canvas`
 
 * Run the following command from the root directory:
 

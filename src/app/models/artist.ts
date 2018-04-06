@@ -4,4 +4,5 @@ export class Artist {
   medium: string;
   location: string;
   statement: string;
+  projectIds: string[];
 }
