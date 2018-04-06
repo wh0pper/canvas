@@ -26,20 +26,11 @@ export class NavComponent {
     });
   }
 
-  // login() {
-  //   this.authService.login();
-  // }
-
   logout() {
     this.authService.logout();
   }
 
-  // signup() {
-  //   this.router.navigate(['signup']);
-  // }
-
   goToUsersPage() {
-    console.log(this.user);
-    //navigate based on this.user uid
+    this.router.navigate(["artist", this.user.uid])
   }
 }

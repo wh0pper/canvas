@@ -10,14 +10,9 @@ export class AuthenticationService {
   constructor(public afAuth: AngularFireAuth) {
     this.user = afAuth.authState;
   }
-  //
-  // login(email, password) {
-  //   //google: this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-  //
-  //   this.user.subscribe(userData => {
-  //     // this.artistService.storeUserData(userData);
-  //     console.log(userData)
-  //   });
+
+  // login() {
+    //google: this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   // }
 
   loginWithEmail(email, password) {
