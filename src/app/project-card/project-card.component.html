@@ -1,7 +1,8 @@
-<div class="card border-secondary mb-3">
+<div class="card border-secondary mb-3" routerLink="/project/{{project.$key}}">
   <div class="card-header">{{project.title}}</div>
   <div class="card-body">
-    <h4 class="card-title"><a routerLink="/artist/{{project.artistId}}">Artist: {{project.artistId}}</a></h4>
+    <h4 class="card-title">Artist: {{project.artistId}}</h4>
+    <!-- <a routerLink="/artist/{{project.artistId}}"> -->
     <h6 class="card-subtitle">{{project.medium}}</h6>
     <img class="img-fluid" src={{project.imgURLs[0]}}/>
     <p class="card-text">{{project.info}}</p>

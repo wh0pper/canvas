@@ -5,10 +5,12 @@ import { EventsComponent } from './events/events.component';
 import { ArtistPageComponent } from './artist-page/artist-page.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/projects', pathMatch: 'full' },
   { path: 'projects', component: ProjectsComponent },
+  { path: 'project/:id', component: ProjectDetailComponent },
   { path: 'events', component: EventsComponent },
   { path: 'artist/:id', component: ArtistPageComponent },
   { path: 'signup', component: SignupComponent },
