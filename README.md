@@ -1,18 +1,25 @@
 # Canvas (CNVS)
 
 ## Description
-Canvas is a mockup for a social media platform dedicated to artists and creatives. It's intended to give users a platform for displaying a sharing their work, connecting and collaboriting with other artists, as well as finding and promoting events related to their work. 
+Canvas is a mockup for a social media platform dedicated to artists and creatives. It's intended to give users a platform for displaying a sharing their work, connecting and collaborating with other artists, as well as finding and promoting events related to their work.
+
+* Note: this site is still being developed, but I'd love for you to check out what I have built so far.
 
 ## Structure
 Canvas' primary features are:
-* a discovery page that displays searchable and filterable projects that have been uploaded to the platform.
-* an events page, where a registered user can create new events and a visitor can view events organized by month
+* a discovery page that displays searchable and filterable projects that have been uploaded to the platform
+* an events page where a visitor can view events organized by month
 * user authentication which unlocks the ability to create an artist profile, upload new projects to the platform, or publish events to the calendar
-* artist profiles that show users stats and link to any projects or events published by that user
+* artist profiles that show users information
 
-Additional planned features:
-* a chat functionality allowing users to communicate directly on the platform
-* the ability to leave comments on projects and RSVP to events
+Incomplete features:
+* adding new projects and events to the site
+* the ability to leave comments on projects
+* displaying a specific users projects on their profile page
+
+## Known Bugs
+* at this time if you register for the site you will encounter bugs with a number of sites user-specific features. To demo these features you may sign in with these credentials: email: exampleuser1@email.com password: password
+
 
 ## Prerequisites
 
@@ -46,6 +53,7 @@ This will download the project's dependencies
     projectId: "XXXX",
     storageBucket: "XXXX",
   };
+  ```  
 
 ## Running / Development
 
