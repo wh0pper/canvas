@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from '../authentication.service';
+import { ArtistService } from '../artist.service';
 
 @Component({
   selector: 'app-signup',
@@ -8,16 +8,17 @@ import { AuthenticationService } from '../authentication.service';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(public authService: AuthenticationService) { }
+  constructor(public artistService: ArtistService) { }
 
   ngOnInit() {
   }
 
   submitSignupForm(name, medium, location, statement, email, password) {
+    this.artistService.registerNewArtist(name, email, password);
     //if creation is successful, also logs in
-    this.authService.afAuth.auth.createUserWithEmailAndPassword(email, password).then(user => {
-      this.authService.database.ref("users").push({"displayName": name});
-    }, error => console.log('signup error'));
+    // this.authService.afAuth.auth.createUserWithEmailAndPassword(email, password).then(user => {
+    //   this.authService.database.ref("users").push({"displayName": name});
+    // }, error => console.log('signup error'));
   }
 
 }

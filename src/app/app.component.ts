@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from './authentication.service';
+import { ArtistService } from './artist.service';
+import { EventService } from './event.service';
+import { ProjectService } from './project.service';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [AuthenticationService]
+  providers: [AuthenticationService, ArtistService, EventService, ProjectService]
 })
 export class AppComponent {
   user;
