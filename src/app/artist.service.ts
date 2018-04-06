@@ -15,8 +15,8 @@ export class ArtistService {
     return this.artists;
   }
 
-  getArtistById(artistId: string) {
-    return this.database.object('artists/' + artistId)
+  getArtistById(userUID: string) {
+    return this.database.list('artists', {query: {orderByChild: "userUID", equalTo: userUID}});
   }
 
   registerNewArtist(userName, email, password) {

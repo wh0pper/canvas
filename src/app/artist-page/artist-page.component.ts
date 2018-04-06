@@ -9,17 +9,17 @@ import { ArtistService } from '../artist.service';
   styleUrls: ['./artist-page.component.css']
 })
 export class ArtistPageComponent implements OnInit {
-  artistId: string;
+  userUID: string;
   artistToDisplay: FirebaseObjectObservable<any>;
 
   constructor(private route: ActivatedRoute, private artistService: ArtistService) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.artistId = urlParameters['id'];
+      this.userUID = urlParameters['id'];
     });
-    this.artistService.getArtistById(this.artistId).subscribe(data => {
-      this.artistToDisplay = data;
+    this.artistService.getArtistById(this.userUID).subscribe(data => {
+      this.artistToDisplay = data[0];
     })
   }
 

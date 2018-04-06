@@ -5,5 +5,5 @@ export class Artist {
   statement: string;
   projectIds: string[];
   userUID: string;
-  displayName: string;
+  name: string;
 }

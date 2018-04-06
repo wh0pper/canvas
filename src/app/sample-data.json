@@ -4,21 +4,24 @@
       "name": "Artist 1",
       "medium": "Visual",
       "location": "Portland, OR",
-      "statement": "Artist1 statement..."
+      "statement": "Artist1 statement...",
+      "userUID": "YRHgPejd5DZpxitJsdG7Nf8fvy02"
     },
     {
       "id": "2",
       "name": "Artist 2",
       "medium": "Music",
       "location": "Seattle, WA",
-      "statement": "Artist2 statement..."
+      "statement": "Artist2 statement...",
+      "userUID": "mEfV0OPssjUAJNsYkJk2glcKDd02"
     },
     {
       "id": "3",
       "name": "Artist 3",
       "medium": "Video",
       "location": "Los Angeles, CA",
-      "statement": "Artist3 statement..."
+      "statement": "Artist3 statement...",
+      "userUID": "uti7uujnv2RwBRmpOOxDqHaDVMw2"
     }
   ],
   "projects": [
