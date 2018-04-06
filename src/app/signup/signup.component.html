@@ -1,3 +1,17 @@
-<p>
-  signup works!
-</p>
+<div class="card card-default">
+  <div class="card-body form-group">
+    <label>Name:</label>
+    <input class="form-control" #name>
+
+    <label>Medium:</label>
+    <input class="form-control" #medium>
+
+    <label>Location:</label>
+    <input class="form-control" #location>
+
+    <label>Artist Statement:</label>
+    <input class="form-control" #statement>
+
+    <button type="button" class="btn btn-secondary" (click)="submitSignupForm(name.value, medium.value, location.value, statement.value)">Submit</button>
+  </div>
+</div>

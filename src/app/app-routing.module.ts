@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProjectsComponent } from './projects/projects.component';
 import { EventsComponent } from './events/events.component';
 import { ArtistPageComponent } from './artist-page/artist-page.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/projects', pathMatch: 'full' },
   { path: 'projects', component: ProjectsComponent },
   { path: 'events', component: EventsComponent },
-  { path: 'artist/:id', component: ArtistPageComponent }
+  { path: 'artist/:id', component: ArtistPageComponent },
+  { path: 'signup', component: SignupComponent }
 ];
 
 @NgModule({
