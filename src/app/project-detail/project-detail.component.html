@@ -1,3 +1,17 @@
-<p>
-  {{(projectToDisplay | async)?.title}}
-</p>
+<div class="container">
+
+  <div class="jumbotron">
+    <div class="card-body">
+      <h1>{{(projectToDisplay | async)?.title}}</h1>
+      <h4 class="card-title">Artist: {{(projectToDisplay | async)?.artist}}</h4>
+      <h6 class="card-subtitle">Medium: {{(projectToDisplay | async)?.medium}}</h6>
+      <p class="card-text">{{(projectToDisplay | async)?.info}}</p>
+    </div>
+  </div>
+
+  <div class="card image-card border-secondary mb-3">
+    <div class="project-image" *ngFor="let photo of photoURLs">
+      <img class="img-fluid" src={{photo}}>
+    </div>
+  </div>
+</div>

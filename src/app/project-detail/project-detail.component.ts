@@ -12,13 +12,16 @@ import { ProjectService } from '../project.service';
 export class ProjectDetailComponent implements OnInit {
   projectToDisplayId: string;
   projectToDisplay;
+  photoURLs: string[];
 
   constructor(private route: ActivatedRoute, private projectService: ProjectService) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => this.projectToDisplayId = urlParameters['id']);
     this.projectToDisplay = this.projectService.getProjectById(this.projectToDisplayId);
-    console.log(this.projectToDisplay);
+    this.projectToDisplay.subscribe((projectData) => {
+      this.photoURLs = projectData.imgURLs
+    });
   }
 
 }

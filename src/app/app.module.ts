@@ -23,6 +23,7 @@ import { ProjectAddComponent } from './project-add/project-add.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { EventAddComponent } from './event-add/event-add.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -43,7 +44,8 @@ export const firebaseConfig = {
     ProjectAddComponent,
     SignupComponent,
     LoginComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    EventAddComponent
   ],
   imports: [
     BrowserModule,

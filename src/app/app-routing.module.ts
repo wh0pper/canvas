@@ -6,6 +6,7 @@ import { ArtistPageComponent } from './artist-page/artist-page.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { ProjectAddComponent } from './project-add/project-add.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/projects', pathMatch: 'full' },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'events', component: EventsComponent },
   { path: 'artist/:id', component: ArtistPageComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'newproject', component: ProjectAddComponent },
 ];
 
 @NgModule({
