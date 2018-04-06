@@ -20,6 +20,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { ProjectAddComponent } from './project-add/project-add.component';
+import { SignupComponent } from './signup/signup.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -37,7 +38,8 @@ export const firebaseConfig = {
     FilterPipe,
     EventsComponent,
     ArtistPageComponent,
-    ProjectAddComponent
+    ProjectAddComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

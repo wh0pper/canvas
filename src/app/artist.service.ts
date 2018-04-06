@@ -18,6 +18,10 @@ export class ArtistService {
     return this.database.object('artists/' + artistId)
   }
 
+  // storeUserData(userDataFromAuth) {
+  //   this.database.object('artists/' + userDataFromAuth.uid);
+  // }
+
 }
 
 //  Artist[] = [
