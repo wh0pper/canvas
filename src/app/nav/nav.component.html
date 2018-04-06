@@ -16,11 +16,15 @@
 
     <ul class="nav navbar-nav navbar-right">
      <li *ngIf="isLoggedIn">
-       <a>{{userName}}</a>
-       <a (click)="logout()">Log out</a>
+       <hr>
+       <p class="username">{{userName}}</p>
+       <p class="userFeature" (click)="logout()">New Project</p>
+       <p class="userFeature" (click)="logout()">New Event</p>
+       <p class="userFeature" (click)="logout()">Log out</p>
      </li>
      <li *ngIf ="!isLoggedIn">
        <a (click)="login()">Log in</a>
+       <a (click)="login()">Sign up</a>
      </li>
    </ul>
 

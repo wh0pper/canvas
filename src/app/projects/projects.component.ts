@@ -10,11 +10,13 @@ import { FirebaseListObservable } from "angularfire2/database";
   styleUrls: ['./projects.component.css'],
   providers: [ProjectService]
 })
+
 export class ProjectsComponent implements OnInit {
   projects: FirebaseListObservable<any[]>;
   searchButtonText: string = "Search";
 
-  constructor(private router: Router, private projectService: ProjectService) { }
+  constructor(private router: Router, private projectService: ProjectService) {
+  }
 
   ngOnInit() {
     this.getProjects();
