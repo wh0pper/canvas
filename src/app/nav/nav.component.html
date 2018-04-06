@@ -14,19 +14,23 @@
       </li>
     </ul>
 
-    <ul class="nav navbar-nav navbar-right">
-     <li *ngIf="isLoggedIn">
-       <hr>
-       <p class="username">{{userName}}</p>
-       <p class="userFeature" (click)="logout()">New Project</p>
-       <p class="userFeature" (click)="logout()">New Event</p>
-       <p class="userFeature" (click)="logout()">Log out</p>
-     </li>
-     <li *ngIf ="!isLoggedIn">
+    <div class="nav navbar-nav navbar-right">
+      <div *ngIf="isLoggedIn">
+        <div class="dropdown">
+          <button class="btn btn-light dropdown-toggle" data-toggle="dropdown">{{userName}}</button>
+          <div class="dropdown-menu username">
+            <a class="dropdown-item userFeature">Profile</a>
+            <a class="dropdown-item userFeature">New Project</a>
+            <a class="dropdown-item userFeature">New Event</a>
+            <a class="dropdown-item userFeature">Log out</a>
+          </div>
+       </div>
+     </div>
+     <div *ngIf ="!isLoggedIn">
        <a (click)="login()">Log in</a>
-       <a (click)="login()">Sign up</a>
-     </li>
-   </ul>
+       <a>Sign up</a>
+     </div>
+   </div>
 
   </div>
 </nav>
