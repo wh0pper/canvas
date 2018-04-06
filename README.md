@@ -13,11 +13,15 @@ Canvas' primary features are:
 * artist profiles that show users information
 
 Incomplete features:
+* events page formatting
+* confirmation pages and error handling throughout site
 * adding new projects and events to the site
 * the ability to leave comments on projects
 * displaying a specific users projects on their profile page
+* user UID information linking to new artist profiles (existing user IDs hard-coded into database)
 
 ## Known Bugs
+* soooo many
 * at this time if you register for the site you will encounter bugs with a number of sites user-specific features. To demo these features you may sign in with these credentials: email: exampleuser1@email.com password: password
 
 
