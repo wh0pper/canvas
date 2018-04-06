@@ -15,10 +15,6 @@ export class SignupComponent implements OnInit {
 
   submitSignupForm(name, medium, location, statement, email, password) {
     this.artistService.registerNewArtist(name, email, password);
-    //if creation is successful, also logs in
-    // this.authService.afAuth.auth.createUserWithEmailAndPassword(email, password).then(user => {
-    //   this.authService.database.ref("users").push({"displayName": name});
-    // }, error => console.log('signup error'));
   }
 
 }
