@@ -1,3 +1,14 @@
-<p>
-  login works!
-</p>
+<div class="card card-default">
+  <div class="card-body form-group">
+
+    <label>Email address:</label>
+    <input class="form-control" #email>
+
+    <label>Password:</label>
+    <input class="form-control" #password>
+    <br>
+    <button type="button" class="btn btn-secondary" (click)="submitLoginForm(email.value, password.value)">Login</button>
+  </div>
+</div>
+
+<!-- another card to login with google etc -->

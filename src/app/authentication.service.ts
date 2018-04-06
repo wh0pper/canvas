@@ -11,12 +11,20 @@ export class AuthenticationService {
   constructor(public afAuth: AngularFireAuth, private artistService: ArtistService) {
     this.user = afAuth.authState;
   }
+  //
+  // login(email, password) {
+  //   //google: this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+  //
+  //   this.user.subscribe(userData => {
+  //     // this.artistService.storeUserData(userData);
+  //     console.log(userData)
+  //   });
+  // }
 
-  login() {
-    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-    this.user.subscribe(userData => {
-      // this.artistService.storeUserData(userData);
-      console.log(userData)
+  loginWithEmail(email, password) {
+    this.afAuth.auth.signInWithEmailAndPassword(email, password).catch(function(error) {
+      console.log('email login error in auth service');
+      console.log(error);
     });
   }
 
