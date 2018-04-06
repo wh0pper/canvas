@@ -3,7 +3,7 @@
 ## Description
 Canvas is a mockup for a social media platform dedicated to artists and creatives. It's intended to give users a platform for displaying a sharing their work, connecting and collaborating with other artists, as well as finding and promoting events related to their work.
 
-* Note: this site is still being developed, but I'd love for you to check out what I have built so far.
+* Note: this site is still being developed, but I'd love for you to check out what I have built so far. You can either visit a live beta version at: http://canvas-16e85.firebaseapp.com, or host it locally by following the setup instructions below.
 
 ## Structure
 Canvas' primary features are:
@@ -29,7 +29,7 @@ You will need the following software properly installed on your computer.
 * [Node.js](https://nodejs.org/) (with NPM)
 * [TypeScript](https://www.typescriptlang.org/)
 
-## Installation
+## Setup
 
 * Clone this repository
 
