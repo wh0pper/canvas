@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Event } from '../models/event';
 import { EventService } from '../event.service';
-// import { FirebaseObjectObservable } from "angularfire2/database";
+import { FirebaseListObservable } from "angularfire2/database";
 
 @Component({
   selector: 'app-events',
@@ -9,7 +9,7 @@ import { EventService } from '../event.service';
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent implements OnInit {
-  events: Event[];
+  events: FirebaseListObservable<any[]>;
   eventsByMonth: Event[][];
   months: string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
@@ -21,6 +21,7 @@ export class EventsComponent implements OnInit {
 
   getEvents(): void {
     this.events = this.eventService.getEvents();
+    this.getEventsByMonth();
   }
 
   getEventsByMonth(): void {
@@ -28,10 +29,13 @@ export class EventsComponent implements OnInit {
     for (let m = 0; m < 12; m++) {
       eventsByMonth[m] = [];
     }
-    this.events.forEach((event) => {
-      let month = event['dateTime'].getMonth();
-      eventsByMonth[month].push(event)
-    });
+    this.events.subscribe(events => {
+      console.log(events);
+      events.forEach((event) => {
+        let month = new Date(event.dateTime).getMonth();
+        eventsByMonth[month].push(event)
+      })
+    })
     console.log(eventsByMonth);
     this.eventsByMonth = eventsByMonth;
   }
